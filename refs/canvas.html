@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas - easyLib.js</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    canvas {
+      border: 1px solid var(--lll-dark);
+      margin: 20px 0;
+      background-color: var(--xx-dark);
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--lll-dark)"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></a>
+    <a href="../reference.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--lll-dark)"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>Reference</a>
+  </div>
+  <div class="top">
+    <a href="https://github.com/AntonioRafaelFonseca/easyLib.js/blob/main/LICENCE">Licence</a>
+    <div class="github">
+
+      <a href="https://github.com/AntonioRafaelFonseca/easyLib.js">
+        <svg aria-hidden="true" focusable="false" class="octicon octicon-mark-github" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom">
+          <path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z">
+          </path>
+      </svg>Repo</a>
+    </div>
+  </div>
+  <div class="mainVector">
+    <div class="title">
+      <h2 class="lib-title">easyLib</h2>
+      <h1>Canvas</h1>
+    </div>
+    <h3>The easyLib Canvas provides simple functions for drawing on an HTML5 canvas element</h3>
+    
+    <h2>Creating a Canvas</h2>
+    <p>To create a canvas, use the <code>createCanvas(width, height, parent)</code> function:</p>
+    <code>let canvas = createCanvas(500, 500, document.body);</code>
+    
+    <h2>Canvas Functions</h2>
+    
+    <h3>createCanvas(width, height, parent)</h3>
+    <p>Creates a canvas element with the specified width and height, and appends it to the parent element.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+      <li><code>width</code> - The width of the canvas in pixels</li>
+      <li><code>height</code> - The height of the canvas in pixels</li>
+      <li><code>parent</code> - The parent DOM element where the canvas will be appended</li>
+    </ul>
+    <p>Example:</p>
+    <code>let canvas = createCanvas(500, 500, document.body);</code>
+    
+    <h3>fillBackground(color: [r, g, b, a])</h3>
+    <p>Fills the background of the canvas with the specified color using RGB values.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+      <li><code>color</code> - An array with four values [r, g, b, a] where r, g, b are 0-255 and a is 0-1 opacity</li>
+    </ul>
+    <p>Example:</p>
+    <code>fillBackground([255, 0, 0, 0.5]);</code>
+    
+    <h3>drawRect(x, y, w, h, borderColor, fillColor)</h3>
+    <p>Draws a rectangle on the canvas with the specified position, size, border color, and fill color.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+      <li><code>x</code> - The x-coordinate of the top-left corner</li>
+      <li><code>y</code> - The y-coordinate of the top-left corner</li>
+      <li><code>w</code> - The width of the rectangle</li>
+      <li><code>h</code> - The height of the rectangle</li>
+      <li><code>borderColor</code> - The color of the border (CSS color string)</li>
+      <li><code>fillColor</code> - The fill color of the rectangle (CSS color string)</li>
+    </ul>
+    <p>Example:</p>
+    <code>drawRect(50, 50, 100, 100, 'black', 'red');</code>
+    
+    <h3>drawCircle(x, y, radius, borderColor, fillColor)</h3>
+    <p>Draws a circle on the canvas with the specified position, radius, border color, and fill color.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+      <li><code>x</code> - The x-coordinate of the center</li>
+      <li><code>y</code> - The y-coordinate of the center</li>
+      <li><code>radius</code> - The radius of the circle</li>
+      <li><code>borderColor</code> - The color of the border (CSS color string)</li>
+      <li><code>fillColor</code> - The fill color of the circle (CSS color string)</li>
+    </ul>
+    <p>Example:</p>
+    <code>drawCircle(200, 200, 50, 'black', 'blue');</code>
+    
+    <h3>drawLine(x1, y1, x2, y2, borderColor)</h3>
+    <p>Draws a line on the canvas between the specified points with the specified color.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+      <li><code>x1</code> - The x-coordinate of the starting point</li>
+      <li><code>y1</code> - The y-coordinate of the starting point</li>
+      <li><code>x2</code> - The x-coordinate of the ending point</li>
+      <li><code>y2</code> - The y-coordinate of the ending point</li>
+      <li><code>borderColor</code> - The color of the line (CSS color string)</li>
+    </ul>
+    <p>Example:</p>
+    <code>drawLine(100, 100, 300, 300, 'green');</code>
+    
+    <h3>startShape()</h3>
+    <p>Starts a new custom shape on the canvas. Use this with <code>addCustomPoint()</code> and <code>endShape()</code> to create custom polygons.</p>
+    <p>Example:</p>
+    <code>startShape();</code>
+    
+    <h3>addCustomPoint(x, y)</h3>
+    <p>Adds a point to the current shape. Must be called after <code>startShape()</code> and before <code>endShape()</code>.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+      <li><code>x</code> - The x-coordinate of the point</li>
+      <li><code>y</code> - The y-coordinate of the point</li>
+    </ul>
+    <p>Example:</p>
+    <code>addCustomPoint(150, 150);</code>
+    
+    <h3>endShape(fillColor, borderColor)</h3>
+    <p>Closes and draws the current shape on the canvas with the specified fill color and border color.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+      <li><code>fillColor</code> - The fill color of the shape (CSS color string)</li>
+      <li><code>borderColor</code> - The border color of the shape (CSS color string)</li>
+    </ul>
+    <p>Example:</p>
+    <code>endShape('orange', 'yellow');</code>
+    
+    <h2>Usage Examples</h2>
+    
+    <h3>Example 1: Draw a rectangle</h3>
+    <p>Example:</p>
+    <pre>createCanvas(500, 500, document.body);
+fillBackground([255, 255, 255, 1]);
+drawRect(50, 50, 100, 100, 'black', 'red');</pre>
+    
+    <h3>Example 2: Draw a circle</h3>
+    <p>Example:</p>
+    <pre>createCanvas(500, 500, document.body);
+fillBackground([255, 255, 255, 1]);
+drawCircle(200, 200, 50, 'black', 'blue');</pre>
+    
+    <h3>Example 3: Draw a line</h3>
+    <p>Example:</p>
+    <pre>createCanvas(500, 500, document.body);
+fillBackground([255, 255, 255, 1]);
+drawLine(100, 100, 300, 300, 'green');</pre>
+    
+    <h3>Example 4: Draw a custom shape</h3>
+    <p>Example:</p>
+    <pre>createCanvas(500, 500, document.body);
+fillBackground([255, 255, 255, 1]);
+startShape();
+addCustomPoint(100, 100);
+addCustomPoint(150, 50);
+addCustomPoint(200, 100);
+addCustomPoint(150, 150);
+endShape('purple', 'black');</pre>
+    
+    <footer>&copy; António Fonseca</footer>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

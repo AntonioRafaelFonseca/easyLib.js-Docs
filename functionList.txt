@@ -1,0 +1,29 @@
+-------------------------
+Canvas
+-------------------------
+createCanvas(width, height, parent)
+fillBackground(color: [r, g, b, a])
+drawRect(x, y, w, h, borderColor, fillColor)
+drawCircle(x, y, radius, borderColor, fillColor)
+drawLine(x1, y1, x2, y2, borderColor)
+
+startShape()
+addCustomPoint(x, y)
+endShape(fillColor, borderColor)
+
+--------------------
+math
+--------------------
+
+random(min, max, numberOfDecimalPoints)
+map(variable, floor, celing, min, max)
+round(number)
+limitDecimal(number, numberOfDecimalPoints)
+
+
+------------------
+mouse
+-----------------
+mouse.x > int
+mouse.y > int
+mouse.pressed > bool
