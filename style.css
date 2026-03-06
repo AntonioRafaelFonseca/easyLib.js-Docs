@@ -217,6 +217,12 @@ pre
   flex: 1;
 }
 
+#helloWorld::after
+{
+  content: ".js";
+  color: var(--accent);
+}
+
 ul
 {
   list-style: square;
